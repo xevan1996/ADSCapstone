@@ -18,11 +18,11 @@ def predict():
     final_features = [np.array(float_features)]
     prediction = model.predict(final_features)
 
-    if output == 0:
-        prediction = "Negative"
+    if prediction == 0:
+        output = "Negative"
     else:
-        prediction = "Positive"
-        
+        output = "Positive"
+
     return render_template("index.html", prediction_text='Heart Failure Diagnosis is {}'.format(output))
 
 @app.route('/results',methods=['POST'])
