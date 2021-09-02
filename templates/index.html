@@ -11,20 +11,20 @@
 </head>
 <body style="background: rgb(181, 242, 255);">
   <div class="login">
-   <h1>Heart Failure Prediction</h1>
+   <h1><u>Heart Failure Prediction</u></h1>
     <form action="{{ url_for('predict')}}" method="post">
-      <label for="age" colo>Age:  </label>
+      <label for="age" colo>Age&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;:</label>
       <input type="text" name="age" placeholder="age" required="required">
       <br>
       <br>
-      <label for="sex">Sex:  </label>
+      <label for="sex">Sex&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; :</label>
       <select id="sex" name="sex" placeholder="sex", required="required">
         <option value="1">1: Male</option>
         <option value="0">0: Female</option>
       </select>
       <br>
       <br>
-      <label for="chest pain type">Chest Pain Type:  </label>
+      <label for="chest pain type">Chest Pain Type&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; :  </label>
       <select id="chest pain type" name="chest pain type", placeholder="chest pain type", required="required">
         <option value="1">1 Typical Angina</option>
         <option value="2">2 Atypical Angina</option>
@@ -33,11 +33,11 @@
       </select>
       <br>
       <br>
-      <label for="resting blood pressure">Resting Blood Pressure (mm/Hg):  </label>
+      <label for="resting blood pressure">Resting Blood Pressure (mm/Hg)&ensp; :  </label>
       <input type="text" name="resting blood pressure" placeholder="resting blood pressure" required="required">
       <br>
       <br>
-      <label for="resting ecg">Resting ECG:  </label>
+      <label for="resting ecg">Resting ECG&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; :  </label>
       <select id="resting ecg" name="resting ecg", placeholder="resting ecg", required="required">
         <option value="0">0 Normal</option>
         <option value="1">1 ST Segment Abnormality</option>
@@ -45,22 +45,22 @@
       </select>
       <br>
       <br>
-      <label for="maximum heart rate">Maximum Heart Rate (BPM):  </label>
+      <label for="maximum heart rate">Maximum Heart Rate (BPM)&emsp; &emsp;:  </label>
       <input type="text" name="maximum heart rate" placeholder="maximum heart rate" required="required">
       <br>
       <br>
-      <label for="exercise-induced angina">Exercise-induced Angina:  </label>
+      <label for="exercise-induced angina">Exercise-induced Angina&emsp; &emsp; &emsp; &nbsp;:  </label>
       <select id="exercise-induced angina" name="exercise-induced angina", placeholder="exercise-induced angina", required="required">
         <option value="0">No</option>
         <option value="1">Yes</option>
       </select>
       <br>
       <br>
-      <label for="st depression">ST Depression (mV):  </label>
+      <label for="st depression">ST Depression (mV)&emsp; &emsp; &emsp; &emsp; &ensp; :  </label>
       <input type="text" name="st depression" placeholder="st depression" required="required">
       <br>
       <br>
-      <label for="slope">Slope:  </label>
+      <label for="slope">Slope&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;:  </label>
       <select id="slope" name="slope", placeholder="slope", required="required">
         <option value="1">1 Up Slopping</option>
         <option value="2">2 Flat</option>
@@ -68,22 +68,26 @@
       </select>
       <br>
       <br>
-      <label for="diabetic">Diabetic:  </label>
+      <label for="diabetic">Diabetic&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;:  </label>
       <select id="diabetic" name="diabetic", placeholder="diabetic", required="required">
         <option value="0">No</option>
         <option value="1">Yes</option>
       </select>
       <br>
       <br>
-      <label for="cholesterol">Cholesterol (mg/dL):  </label>
+      <label for="cholesterol">Cholesterol (mg/dL)&emsp; &emsp; &emsp; &emsp;&emsp;:  </label>
       <input type="text" name="cholesterol" placeholder="cholesterol" required="required">
+      <br>
+      <br>
+      <br>
+      <br>
       <br>
       <br>
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict Heart Failure</button>
     </form>
     <br>
     <br>
-    <h2>
+    <h2 style="background: rgb(203, 195, 227);">
     {{ prediction_text }}
     </h2>
   </div>
