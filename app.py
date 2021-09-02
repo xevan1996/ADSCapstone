@@ -3,7 +3,6 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import joblib
 import statsmodels.api as sm
-import request
 
 app = Flask(__name__)
 model = joblib.load('HFD_model_1.pkl')
