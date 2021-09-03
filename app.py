@@ -5,7 +5,10 @@ import joblib
 import statsmodels.api as sm
 import random
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='ADSCapstone/static')
+            
 model = joblib.load('HFD_model_1.pkl')
 
 @app.route('/')
