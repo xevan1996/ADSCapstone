@@ -8,7 +8,7 @@ import random
 app = Flask(__name__,
             static_url_path='',
             static_folder='ADSCapstone/static')
-            
+
 model = joblib.load('HFD_model_1.pkl')
 
 @app.route('/')
@@ -29,11 +29,11 @@ def predict():
     final_con = "{:.2f}".format(final_con)
 
     if prediction == 0:
-        output = "Negative"
+        output = "NEGATIVE"
     else:
-        output = "Positive"
+        output = "POSITIVE"
 
-    return render_template("index.html", prediction_text='Heart Failure Diagnosis is {} with a confidence of {} %'.format(output, final_con))
+    return render_template("index.html", prediction_text='Heart Failure Diagnosis is {} with a CONFIDENCE of {} %'.format(output, final_con))
 
 @app.route('/results',methods=['POST'])
 def results():
