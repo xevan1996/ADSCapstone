@@ -1,15 +1,20 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
+from forms import dataForm
 import pickle
 import joblib
 import statsmodels.api as sm
 import random
+import os
 
 app = Flask(__name__,
             static_url_path='',
             static_folder='ADSCapstone/static')
 
 model = joblib.load('HFD_model_1.pkl')
+
+SECRET_KEY = os.urandom(32)
+app.config['SECRET_KEY'] = SECRET_KEY
 
 @app.route('/')
 def home():
@@ -29,11 +34,12 @@ def predict():
     final_con = "{:.2f}".format(final_con)
 
     if prediction == 0:
-        output = "NEGATIVE"
+        output = "Negative"
     else:
-        output = "POSITIVE"
+        output = "Positive"
 
-    return render_template("index.html", prediction_text='Heart Failure Diagnosis is {} with a CONFIDENCE of {} %'.format(output, final_con))
+    form = dataForm()
+    return render_template("index.html", prediction_text='Heart Failure Diagnosis is {} with a confidence of {} %'.format(output, final_con), mypred=form)
 
 @app.route('/results',methods=['POST'])
 def results():
