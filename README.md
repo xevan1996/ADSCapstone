@@ -16,22 +16,21 @@ Methodology
 The idea of a stacked ensemble is to gather a bunch of insights, observations and inferences ovbtained from an array of ML/DL models (acting as the base learners in layer 1) and pass it to a DL model (acting as the reinforced meta-learner in layer 2)
 
 Models Selected as Base Learners:
-Extra Trees Classifier
-Random Forest Classifier
-Support Vector Machine (Linear)
-Support Vector Machine (RBF)
-Adaptive Boost Classifier
-Gradient Boosting Classifier                                                       
-XG Boost
-Multiple Learning Perceptron
-
+1. Extra Trees Classifier
+2. Random Forest Classifier
+3. Support Vector Machine (Linear)
+4. Support Vector Machine (RBF)
+5. Adaptive Boost Classifier
+6. Gradient Boosting Classifier                                                       
+7. XG Boost
+8. Multiple Learning Perceptron
 Reinforced Meta-Learner:
 Multiple Learning Perceptron
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 The stacked classifier is evaluated according to accuracy, sensitivity, specificity and MCC.
 
 Feature Reselection is done through SHAP analysis and PDP plot along with a few statistical coefficients to identify the impact of each individual feature to the model outcome.
 
-Web App: https://health-prediction-heart.herokuapp.com
-Mobile App: https://tired-street-7279.glideapp.io/
+1. Web App: https://health-prediction-heart.herokuapp.com
+2. Mobile App: https://tired-street-7279.glideapp.io/
